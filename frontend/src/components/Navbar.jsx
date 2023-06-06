@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, MobileNav, Typography, Button, MenuItem, Avatar, IconButton } from "@material-tailwind/react";
+import { Navbar, MobileNav, Typography, MenuItem, Avatar, IconButton } from "@material-tailwind/react";
 import { BookOpenIcon, UserIcon, BanknotesIcon, BuildingStorefrontIcon, BriefcaseIcon, Bars2Icon } from "@heroicons/react/24/outline";
+import profile from "../img/afix.jpg"
 
 function ProfileMenu() {
   return (
-    <Button variant="text" color="blue-gray" className="flex items-center gap-1 rounded-full py-0.5 px-2 lg:ml-auto">
+    <div className="flex items-center gap-1 rounded-full py-0.5 pr-4 lg:ml-auto">
       <Avatar
         variant="circular"
         size="sm"
         alt="candice wu"
         className="border border-blue-500 p-0.5"
-        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+        src={profile}
       />
-    </Button>
+    </div>
   );
 }
 
@@ -75,7 +76,7 @@ export function CustomNavbar() {
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <Link to="/">
           <Typography color="blue-gray" className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
-            AfixVega
+            GRB
           </Typography>
         </Link>
         <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
