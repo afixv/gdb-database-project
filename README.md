@@ -1,13 +1,7 @@
-# Example-Source-Code-Frontend (UI)
-
-Source ini menggunakan React js dan Tailwinds CSS.
-
-Source Code ini untuk Frontend (Bagian UI)nya
-
 ## How to Run this Source Code in Local 
 - Clone this project on your computer.
   ```bash
-     https://github.com/agnessuarna/Example-Teknologi-Basis-Data-.git
+     https://github.com/afixv/gdb-database-project.git
    ```
 ### Frontend
 
