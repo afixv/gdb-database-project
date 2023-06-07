@@ -22,3 +22,23 @@ Run the app in development mode
 ```bash
   npm run start
 ```
+
+### Backend
+
+Go to the frontend project directory
+
+```bash
+  cd backend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Run the app in development mode
+
+```bash
+  npm run dev
+```
