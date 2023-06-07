@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Table = ({ rows, columns, deleteRow, editRow }) => {
+export const Table = ({ rows, columns, deleteRow, editRow, pk }) => {
   return (
     <>
       <div className="flex flex-col">
@@ -11,27 +11,31 @@ export const Table = ({ rows, columns, deleteRow, editRow }) => {
                 <thead className="bg-gray-50">
                   <tr>
                     {columns.map((column) => (
-                      <th key={column.key} scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th key={column.name} scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         {column.label}
                       </th>
                     ))}
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {rows.map((row, index) => (
                     <tr key={index}>
                       {columns.map((column) => (
-                        <td key={column.key} className="px-6 py-4 whitespace-nowrap">
-                          {column.render ? column.render(row) : row[column.key]}
+                        <td key={column.name} className="px-6 py-4 whitespace-nowrap">
+                          {column.render ? column.render(row) : row[column.value]}
                         </td>
                       ))}
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" className="text-indigo-600 hover:text-indigo-900" onClick={() => deleteRow(index)}>
+                        <a href="#" className="text-indigo-600 hover:text-indigo-900" onClick={() => deleteRow(index, row[pk])}>
                           Delete
                         </a>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" className="text-indigo-600 hover:text-indigo-900" onClick={() => editRow(index)}>
+                        <a href="#" className="text-indigo-600 hover:text-indigo-900" onClick={() => editRow(index, row[pk])}>
                           Edit
                         </a>
                       </td>

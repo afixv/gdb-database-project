@@ -3,7 +3,7 @@ const router = express.Router()
 
 const Book = require('../controllers/book.controller');
 const Author = require('../controllers/author.controller');
-const Genre = require('../controllers/genre.controller');
+const Category = require('../controllers/category.controller');
 const Publisher = require('../controllers/publisher.controller');
 
 // Books
@@ -18,11 +18,11 @@ router.post('/author', Author.create);
 router.delete('/author/:id', Author.delete);
 router.put('/author/:id', Author.update);
 
-// genres
-router.get('/genre', Genre.index);
-router.post('/genre', Genre.create);
-router.delete('/genre/:id', Genre.delete);
-router.put('/genre/:id', Genre.update);
+// Categories
+router.get('/category', Category.index);
+router.post('/category', Category.create);
+router.delete('/category/:id', Category.delete);
+router.put('/category/:id', Category.update);
 
 // publishers
 router.get('/publisher', Publisher.index);
