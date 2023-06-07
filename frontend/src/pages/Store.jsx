@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export function Store() {
   return (
-    <div className="flex item-center">
-      <h1 className="">Store</h1>;
+    <div className="text-center mt-24 align-middle">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-2 text-dark-blue">COMING SOON</h1>
+        <h2 className="text-lg"> due to time constraints ✌️ </h2>
     </div>
   );
 }
