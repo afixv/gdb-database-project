@@ -5,6 +5,7 @@ const bodyParser 	= require("body-parser");
 const helmet 		= require("helmet");
 const morgan 		= require('morgan');
 const port          = 3002
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(helmet());
@@ -15,16 +16,12 @@ app.use(cors({
 	credentials: true
 }));
 const BookRouter = require('./src/routers/book.router');
-const AuthorRouter = require('./src/routers/author.router');
 
 app.use('/books', BookRouter);
-app.use('/author', AuthorRouter);
-
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello World!');
 })
-
 
 app.use((req, res, next) => {
 	const error = new Error("Not found!");
