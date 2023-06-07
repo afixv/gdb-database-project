@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Book, Customer, Purchase, Staff, Store, NoPage, Author, Publisher } from "./pages";
+import { Book, Customer, Purchase, Staff, Store, NoPage, Author, Publisher, Home } from "./pages";
 import { CustomNavbar } from "./components";
 import "./index.css";
 
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <CustomNavbar />
         <Routes>
-          <Route path="/" element={<Book />} />
+          <Route path="/" element={<Home />} />
           <Route path="book" element={<Book />} />
           <Route path="author" element={<Author />} />
           <Route path="publisher" element={<Publisher />} />
