@@ -4,7 +4,7 @@ const cors          = require('cors')
 const bodyParser 	= require("body-parser");
 const helmet 		= require("helmet");
 const morgan 		= require('morgan');
-const port          = 3001
+const port          = 3002
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(helmet());
@@ -15,10 +15,10 @@ app.use(cors({
 	credentials: true
 }));
 const BookRouter = require('./src/routers/book.router');
-const StaffRouter = require('./src/routers/staff.router');
+const AuthorRouter = require('./src/routers/author.router');
 
 app.use('/books', BookRouter);
-app.use('/staffs', BookRouter);
+app.use('/author', AuthorRouter);
 
 
 app.get('/', (req, res) => {
