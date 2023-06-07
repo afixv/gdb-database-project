@@ -30,14 +30,14 @@ const navListMenuItems = [
     icon: PencilIcon,
     title: "Author",
     description: "All the stuff that we dan from legal made us add.",
-    path: '/book/author'
+    path: '/author'
   },
   {
     color: "purple",
     icon: RocketLaunchIcon,
     title: "Publisher",
     description: "Checkout our products that helps a startup.",
-    path: '/book/publisher'
+    path: '/publisher'
   },
 ];
 
