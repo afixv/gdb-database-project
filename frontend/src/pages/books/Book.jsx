@@ -14,7 +14,7 @@ export function Book() {
 
   const handleDeleteRow = (targetIndex, bookID) => {
     const adminApi = axios.create({
-      baseURL: "http://localhost:3001",
+      baseURL: "http://localhost:3002",
     });
     adminApi.delete(`/books/${bookID}`).then((res) => {
       alert(res.data.message);
@@ -29,7 +29,7 @@ export function Book() {
 
   const handleSubmit = (newRow, mode) => {
     const adminApi = axios.create({
-      baseURL: "http://localhost:3001", // Ganti dengan URL backend yang sesuai
+      baseURL: "http://localhost:3002", // Ganti dengan URL backend yang sesuai
     });
 
     if (mode === "add") {
@@ -59,7 +59,7 @@ export function Book() {
 
   useEffect(() => {
     const adminApi = axios.create({
-      baseURL: "http://localhost:3001",
+      baseURL: "http://localhost:3002",
     });
     adminApi.get("/books/publisher").then((res) => {
       const publishers = res.data.data.rows;
