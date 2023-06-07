@@ -47,7 +47,7 @@ exports.create = async (req, res, next) => {
 
     res.status(201).json({
       error: false,
-      message: `Berhasil menambahkan buku`,
+      message: `Book Added Successfully`,
     });
   } catch (error) {
     await pool.query("ROLLBACK"); // Rollback the transaction in case of an error
@@ -61,7 +61,7 @@ exports.delete = async (req, res, next) => {
       await pool.query(`DELETE FROM book WHERE "bookID" = $1;`, [id]);
       res.status(200).json({
           error: false,
-          message: `Berhasil menghapus buku`
+          message: `Book Deleted Successfully`
       })
   } catch (error) {
       return next(error);
@@ -92,7 +92,7 @@ exports.update = async (req, res, next) => {
 
     res.status(200).json({
       error: false,
-      message: "Berhasil mengubah buku",
+      message: "Book Updated Successfully",
     });
   } catch (error) {
     await pool.query("ROLLBACK"); // Rollback the transaction in case of an error
